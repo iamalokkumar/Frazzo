@@ -1,5 +1,5 @@
-
-let mangoes=[{name:"Alphonso Mango Devgad",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/329/original/data?1616795305"},
+let obj={
+   mangoes:[{name:"Alphonso Mango Devgad",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/329/original/data?1616795305"},
 {name:"Mango Badami",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/135/original/data?1612689931"},
 {name:"Mango Totapuri Raw",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/597/original/data?1647577454"},
 {name:"Mango Lalbhag Sindhura",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/250/original/data?1621065378"},
@@ -7,17 +7,17 @@ let mangoes=[{name:"Alphonso Mango Devgad",src:"https://s3.ap-south-1.amazonaws.
 {name:"Mango Kesar",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/FKES1.png"},
 {name:"Alphonso Mango Devgad (2 x 6 pcs)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/339/original/data?1620237313"},
 {name:"Mango Mallika",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/294/original/data?1650906368"},
-];
+],
 
-let fruits=[{name:"Apple Royal Gala",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/006/original/data?1642616267"},
+  fruits:[{name:"Apple Royal Gala",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/006/original/data?1642616267"},
   {name:"Wood Apple",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/244/original/data?1613050070"},
    {name:"Pear Green / Packham",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/096/original/data?1625415915"},
   {name:"Apple Red Delicious",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/241/original/data?1610967581"},
    {name:"Apple Fuji",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/427/original/data?1629721355"},
-];
+],
 
 
-let vegetables =[{name:"Brinjal Bharta",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBRI12.png"},
+  vegetables:[{name:"Brinjal Bharta",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBRI12.png"},
     {name:"Pumpkin Green",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/101/original/data?1612451098"},
     {name:"Capsicum (Shimla), Green Shimla Mirchi",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VCAP12.png"},
     {name:"Cucumber Green Indian / Kheera / Kakdi",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/315/original/data?1614700255"},
@@ -39,10 +39,10 @@ let vegetables =[{name:"Brinjal Bharta",src:"https://fraazo-master.s3.ap-south-1
     {name:"Beans Chawli",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VCHA12.png"},
     {name:"Sponge Gourd (Galka)",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VSPO12.png"},
     {name:"Lady's Finger (Bhindi / Okra / Bhendi)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/624/original/data?1649243792"},
-    ];
+    ],
 
 
-let herbs=[{name:"Betel Leaf - 12 Pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/602/original/data?1635155510"},
+  herbs:[{name:"Betel Leaf - 12 Pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/602/original/data?1635155510"},
    {name:"Coriander at Re1",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/003/163/original/data?1640321543"},
    {name:"Masala Combo",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/003/276/original/data?1642317197"},
    {name:"Lemon(100g) / Nimboo / Nibu",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/003/250/original/data?1642167498"},
@@ -58,11 +58,11 @@ let herbs=[{name:"Betel Leaf - 12 Pcs",src:"https://s3.ap-south-1.amazonaws.com/
    {name:"Banana Stem",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/380/original/data?1635063619"},
    {name:"Amaranthus Red",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/162/original/data?1598301503"},
    {name:"Mint Leaves / Pudina",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/LMIN11.png"},
-   {name:"Spring Onion",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/LSPR11.png"},];       
+   {name:"Spring Onion",src:"https://fraazo-master.s3.ap-south-1.amazonaws.com/products/LSPR11.png"}],       
 
 
 
-let Dry_Fruits=[{name:"Kismis - 1 Kg (Pack of 5*200 gms)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/595/original/data?1635145018"},
+   Dry_Fruits:[{name:"Kismis - 1 Kg (Pack of 5*200 gms)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/595/original/data?1635145018"},
             {name:"Cashew Tukda - 100gm",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/580/original/data?1635086672"},
             {name:"Happilo Premium Turkish Apricots, 200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/960/original/data?1648982028"},
             {name:"Pista Salted - 100gms",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/586/original/data?1635141850"},
@@ -103,11 +103,11 @@ let Dry_Fruits=[{name:"Kismis - 1 Kg (Pack of 5*200 gms)",src:"https://s3.ap-sou
             {name:"Ziofit Californian Almonds, (200 g+ 200 g), Buy 1 Get 1",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/759/original/data?1648819523"},
             {name:"Ziofit Indian Whole Cashewnuts, (200 g + 200 g), Buy 1 Get 1",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/769/original/data?1648820842"},
             {name:"Happilo Premium Natural Californian Almonds, 200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/017/original/data?1648985185"},
-            {name:"Happilo Premium Iranian Roasted & Salted Pistachios, 200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/024/original/data?1648985468"},]    
+            {name:"Happilo Premium Iranian Roasted & Salted Pistachios, 200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/024/original/data?1648985468"}],
             
             
 
-let kitchen_staples=[{name:"Maya Whole Spice Black Cardamom, 50 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/120/original/data?1649657414"},
+kitchen_staples:[{name:"Maya Whole Spice Black Cardamom, 50 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/120/original/data?1649657414"},
                   {name:"AMBARI CHILLI POWDER 200GM",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/088/original/data?1648282992"},
                   {name:"EVEREST MEAT MASALA 50 g CBD",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/284/original/data?1646028061"},
                   {name:"EVEREST SABJI MASALA 50 g CBD",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/287/original/data?1646028594"},
@@ -169,13 +169,13 @@ let kitchen_staples=[{name:"Maya Whole Spice Black Cardamom, 50 g",src:"https://
                   {name:"Maya Whole Spice Guntur Chilli 100g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/081/original/data?1648280317"},
                   {name:"Ambari Kanda Lasun Masala, 200gm",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/980/original/data?1648129703"},
                   {name:"Ambari Goda Masala 100g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/508/original/data?1648721805"},
-                  {name:"Maya Whole Spice Big Mustard Seeds, 100 ",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/382/original/data?1648552884"},]     
+                  {name:"Maya Whole Spice Big Mustard Seeds, 100 ",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/382/original/data?1648552884"}],     
                   
                   
 
 
 
-let oils=[{name:"Figaro Extra Virgin Olive Oil, 1 L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/128/original/data?1645858703"},
+  oils:[{name:"Figaro Extra Virgin Olive Oil, 1 L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/128/original/data?1645858703"},
 {name:"Dhara Health Refined Sunflower Oil (Pouch), 1L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/124/original/data?1645858457"},
 {name:"Saffola Total Refined Cooking Oil, 5 L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/206/original/data?1650438622"},
 {name:"Fortune Kachi Ghani Pure Mustard Oil (Pouch) 1L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/148/original/data?1648452540"},
@@ -194,21 +194,21 @@ let oils=[{name:"Figaro Extra Virgin Olive Oil, 1 L",src:"https://s3.ap-south-1.
 {name:"Fortune Sunlite Refined Sunflower Oil (Jar), 5 L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/373/original/data?1644032919"},
 {name:"Fortune Sunlite Sunflower Refined Oil Pouch, 1 Ltr",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/889/original/data?1645691655"},
 {name:"Saffola Active Pro Weight Watchers Edible Oil - 1 L Pouch",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/593/original/data?1644066717"},
-{name:"Fortune Rice Bran Oil, 1 Ltr",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/001/834/original/data?1643619644"},]       
+{name:"Fortune Rice Bran Oil, 1 Ltr",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/001/834/original/data?1643619644"}],  
 
-let biscutes=[{name:"Britannia Premium Bake Rusk, 300 gms",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/689/original/data?1645450003"},
+  biscutes:[{name:"Britannia Premium Bake Rusk, 300 gms",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/689/original/data?1645450003"},
 {name:"Britannia Toastea Premium Bake Rusk, 300 grams",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/684/original/data?1649253925"},
-{name:"Parle Premium Milk Rusk, 200g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/044/original/data?1645789317"},]
+{name:"Parle Premium Milk Rusk, 200g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/044/original/data?1645789317"}],
 
 
-let breakfast=[{name:"Knorr Classic Mix Veg Soup, 42g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/255/original/data?1645882345"},
+  breakfast:[{name:"Knorr Classic Mix Veg Soup, 42g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/255/original/data?1645882345"},
 {name:"Knorr International Shanghai Hot & Sour Chicken Soup 38 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/257/original/data?1645882653"},
 {name:"Knorr Classic Hot & Sour Veg Soup, 43g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/003/197/original/data?1641548444"},
 {name:"Knorr Thick Tomato Soup, 53 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/407/original/data?1643037443"},
 {name:"Knorr Soupy Mast Masala Noodles, 75 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/001/384/original/data?1640260473"},
-{name:"Knorr Cup-A-Soup Manchow Veg, 12 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/256/original/data?1645882488"},]
+{name:"Knorr Cup-A-Soup Manchow Veg, 12 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/256/original/data?1645882488"}],
 
-let beverages=[{name:"Rage Coffee Vanilla Bubblegum, 50 Gms ",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/782/original/data?1649322621"},
+  beverages:[{name:"Rage Coffee Vanilla Bubblegum, 50 Gms ",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/782/original/data?1649322621"},
 {name:"Rage Coffee Butterscotch Delight, 50g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/146/original/data?1648452217"},
 {name:"Nescafe Classic 100% Pure Instant Coffee, 200 g Stabilo",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/823/original/data?1645617612"},
 {name:"Rage Coffee Dark Chocolate, 50 Gms",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/149/original/data?1648452964"},
@@ -229,10 +229,10 @@ let beverages=[{name:"Rage Coffee Vanilla Bubblegum, 50 Gms ",src:"https://s3.ap
 {name:"Nescafe Classic 100% Pure Instant Coffee, 100 g Jar",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/548/original/data?1643037471"},
 {name:"Nescafe Classic 100% Pure Instant Coffee, 25 g Jar",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/460/original/data?1646732883"},
 {name:"BRU Instant Coffee Pack, 50 Gms",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/884/original/data?1645689049"},
-{name:"BRU Instant 200 g Coffee (Pouch), 200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/883/original/data?1645688898"},]
+{name:"BRU Instant 200 g Coffee (Pouch), 200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/883/original/data?1645688898"}],
 
 
-let cleaning=[{name:"Vim Bar Multipack, 3x200g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/453/original/data?1648640900"},
+  cleaning:[{name:"Vim Bar Multipack, 3x200g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/453/original/data?1648640900"},
 {name:"Surf Excel Matic Top Load Liquid Detergent, 500 ml",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/523/original/data?1647417198"},
 {name:"Ariel Matic Liquid Front Load, 1 Litre",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/294/original/data?1646029504"},
 {name:"Surf Excel Detergent Bar, 4x200 g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/270/original/data?1645885107"},
@@ -257,9 +257,9 @@ let cleaning=[{name:"Vim Bar Multipack, 3x200g",src:"https://s3.ap-south-1.amazo
 {name:"Ariel Matic Top Load Detergent Washing Powder - 2 kg",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/703/original/data?1645451695"},
 {name:"Comfort After Wash Anti Bacterial Fabric Conditioner Green, 860 ml",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/402/original/data?1646204852"},
 {name:"Ariel Complete Detergent Washing Powder -1kg+500g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/628/original/data?1641548590"},
-];
+],
 
-let personal_care=[{name:"Emami Fair & Handsome Radiance Cream for Men",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/729/original/data?1648017953"},
+   personal_care:[{name:"Emami Fair & Handsome Radiance Cream for Men",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/729/original/data?1648017953"},
 {name:"Gillette Presto Ready Shaver 5 Catridge 5 pieces",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/689/original/data?1647872244"},
 {name:"Gillette Classic Menthol Pre Shave Foam - 196g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/217/original/data?1645878008"},
 {name:"Dettol Shaving Cream - Fresh 78g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/740/original/data?1648020337"},
@@ -267,11 +267,11 @@ let personal_care=[{name:"Emami Fair & Handsome Radiance Cream for Men",src:"htt
 {name:"Gillette Regular Pre Shave Cream, 70g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/679/original/data?1641548123"},
 {name:"Gillette Classic Regular Pre Shave Foam, 418g with 33% Extra Free",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/683/original/data?1641548125"},
 {name:"Gillette Classic Sensitive Shave Foam - 418 g (33% extra)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/684/original/data?1641548124"},
-{name:"Old Spice After Shave Lotion - 100 ml (Original)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/676/original/data?1641548126"},
-];
+{name:"Old Spice After Shave Lotion - 100 ml (Original)",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/676/original/data?1641548126"}
+],
 
 
-let health=[{name:"Boroplus Healthy Skin Aniseptic ,80g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/608/original/data?1648800034"},
+    health:[{name:"Boroplus Healthy Skin Aniseptic ,80g",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/608/original/data?1648800034"},
 {name:"Zandu Balm - Ultra Power ,8ml",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/587/original/data?1648795216"},
 {name:"Eno Regular 100 ",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/963/original/data?1648126089"},
 {name:"Zandu Balm & Ointment ,25ml",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/591/original/data?1648796264"},
@@ -292,9 +292,9 @@ let health=[{name:"Boroplus Healthy Skin Aniseptic ,80g",src:"https://s3.ap-sout
 {name:"Vicks Vaporub, 25 ml",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/646/original/data?1641547962"},
 {name:"Durex Extra Condoms , Extra Thin , 10 pc",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/609/original/data?1648800072"},
 {name:"Moov pain relief balm , 50 gm",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/611/original/data?1648800115"},
-{name:"Krack repair ayurvedic foot care cream,25 gm",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/615/original/data?1648800324"},]
+{name:"Krack repair ayurvedic foot care cream,25 gm",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/615/original/data?1648800324"}],
 
-let baby_care=[{name:"Himalaya Gentle Wipes,72 pieces",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/942/original/data?1648116992"},
+   baby_care:[{name:"Himalaya Gentle Wipes,72 pieces",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/942/original/data?1648116992"},
 {name:"Huggies Wonder Pants-Extra Small, 24pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/616/original/data?1648800392"},
 {name:"Pampers Baby Dry Pants- Small, 86 pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/493/original/data?1648711157"},
 {name:"Pampers - All round protection ,76 pieces Size M",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/239/original/data?1650519557"},
@@ -302,4 +302,5 @@ let baby_care=[{name:"Himalaya Gentle Wipes,72 pieces",src:"https://s3.ap-south-
 {name:"Pampers - All round protection ,42 pieces Size L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/240/original/data?1650519629"},
 {name:"Pampers - Baby Dry Pants ,46 pieces Size XS",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/137/original/data?1649053735"},
 {name:"Huggies Wonder Pants-L, 64pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/619/original/data?1648800511"},
-{name:"Pampers   Diapers-XXL, 28pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/612/original/data?1641548487"},]
+{name:"Pampers   Diapers-XXL, 28pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/612/original/data?1641548487"}]
+}
