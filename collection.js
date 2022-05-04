@@ -302,4 +302,4 @@ let baby_care=[{name:"Himalaya Gentle Wipes,72 pieces",src:"https://s3.ap-south-
 {name:"Pampers - All round protection ,42 pieces Size L",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/007/240/original/data?1650519629"},
 {name:"Pampers - Baby Dry Pants ,46 pieces Size XS",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/137/original/data?1649053735"},
 {name:"Huggies Wonder Pants-L, 64pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/619/original/data?1648800511"},
-{name:"Pampers  Diapers-XXL, 28pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/612/original/data?1641548487"},]
+{name:"Pampers   Diapers-XXL, 28pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/612/original/data?1641548487"},]
