@@ -304,6 +304,6 @@ breakfast:[{name:"Knorr Classic Mix Veg Soup, 42g",src:"https://s3.ap-south-1.am
 {name:"Huggies Wonder Pants-L, 64pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/619/original/data?1648800511",price:130},
 {name:"Pampers   Diapers-XXL, 28pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/612/original/data?1641548487",price:130},]}
 
-console.log(obj)
+
 
 localStorage.setItem("items",JSON.stringify(obj))
