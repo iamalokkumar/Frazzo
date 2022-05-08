@@ -304,3 +304,8 @@ kitchen_staples:[{name:"Maya Whole Spice Black Cardamom, 50 g",src:"https://s3.a
 {name:"Huggies Wonder Pants-L, 64pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/619/original/data?1648800511"},
 {name:"Pampers   Diapers-XXL, 28pcs",src:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/612/original/data?1641548487"}]
 }
+
+localStorage.setItem("items",JSON.stringify(obj));
+
+
+
