@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./container/navbar.css">
+    <link rel="stylesheet" href="./container/general_front_page.css">
+    
 </head>
+<script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./collection.js"></script>
 <style>
     #modal_login{
         display:block;
@@ -14,9 +22,9 @@
         left: 40%;
         z-index: 1000;
         width: 300px;
-        /* border: 1px solid; */
+        border: 1px solid;
         border-radius: 15px;
-        
+       
        
         height: 230px;
         border: 1px solid rgba(0,0,0,.15);
@@ -41,44 +49,564 @@
         padding-left: 22%;
       
     }
+    
+       
+    
     body{
-        background-color: rgba(0,0,0,0.4);
+        background-color:rgba(0, 0, 0, 0.8) ;
+        /* filter: brightness(50%); */
     }
-    /* #otp_match{
+    #modal2{
+        display:none;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 500px;
+        height: 100%;
+        border: 1px solid;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
        
-    } */
+       
+        border: 1px solid rgba(0,0,0,.15);
+        background-clip: padding-box;
+        background-color: #fff;
+        /* background-color: rgba(0,0,0,0.4); */
+    }
+   
+    #back{
+        display: block;
+        position:fixed;
+        margin-top: 15px;
+        margin-left: 10px;
+        z-index: 1000;
+        
+       
+
+        
+    }
+    #back>i{
+      pointer-events: none;
+      
+    }
+    #back:hover{
+        cursor: pointer;
+        pointer-events: all;
+    }
+   #mapsearch{
+       display: block;
+       width: 300px;
+       height: 40px;
+       border-radius: 15px;
+       border: 1px solid grey;
+       margin-left: 65px;
+       margin-top: 10px;
+
+   }
+   #mapio{
+       width: 250px;
+       height: 40px;
+       outline: none;
+       border: none;
+       border-radius: 15px;
+   }
+   #current_location{
+       display: flex;
+       border: 1px solid rgb(10, 110, 150);
+       background-color: rgb(122, 214, 214);
+       margin-top: 15px;
+       color: blue;
+   }
+   #current{
+       margin-top: 18px;
+       margin-left: 30%;
+       margin-right: 15px;
+       
+   }
+   .address{
+       width: 250px;
+       height: 25px;
+       margin-left: 15px;
+   }
+   #current_location~h3{
+       line-height: 5px;
+       margin-left: 15px;
+   }
+   #save_address{
+       width: 150px;
+       height: 40px;
+       margin-left:15px;
+       border-radius: 10px;
+       background-color: blue;
+       color: white;
+   }
+   #save_address:hover{
+       cursor: pointer;
+   }
+   .mapouter{position: relative;text-align:left;height:250px;width:500px;}
+   .gmap_canvas {overflow:hidden;background:none!important;height:250px;width:500px;}
+   #loc_img{
+       width: 500px;
+       height: 250px;
+   }
+   #current_img{
+       width: 500px;
+       height: 250px;
+   }
+   #loc{
+       display: none;
+   }
+   #main_slide{
+       width: 80%;
+       height: 350px;
+       display: flex;
+       margin: auto;
+       justify-content:space-between;
+       /* gap:15px; */
+   
+       margin-top:30px;
+       
+
+   }
+   #slide_top{
+       width:60%;
+       height: 100%;
+      
+       border-radius: 20px;
+
+   }
+   #slide_const{
+       width: 38%;
+       height: 100%;
+       display: block;
+   }
+   .img_slide{
+       width: 100%;
+       height: 32%;
+      
+   }
+   #append_grid{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: auto;
+       grid-column-gap: 15px;
+      
+      
+   }
+   #append_grid>div:last-child{
+       /* grid-column-start:1; */
+       grid-column-end: 3;
+   }
+   #cato_grid{
+       margin-top:150px;
+       
+   }
+   #cato_grid{
+       text-align: center;
+   }
+   #append_grid>div:hover{
+       cursor: pointer;
+   }
+   #input_modal{
+       top:11%;
+       left:27%;
+       position: absolute;
+       width: 450px;
+       z-index: 1000;
+       /* background-color: #fff; */
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+      
+       background-clip: padding-box;
+       background-color: #fff;
+
+   }
+
+   /* list mango */
+   .mangoes{
+        display: flex;
+        gap: 10px;
+        width: 95%;
+        height: 300px;
+        border: 1px solid black;
+        margin: auto;
+        
+    }
+    
+    #mangoes_back{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:445%;
+        background-color: #fff;
+      
+       /* background-clip: padding-box; */
+       /* background-color: #fff; */
+       /* top: 10;
+       left: 1; */
+
+
+    }
+    #mangoes_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top:445%;
+        background-color: #fff;
+    }
+   
+    .elements{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .elements:hover{
+        cursor: pointer;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    /* fruits */
+    #fruit_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top:505%;
+        background-color: #fff;
+    }
+    #fruit_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:505%;
+        background-color: #fff;
+    }
+    #dry_fruit_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:566%;
+        background-color: #fff;
+    }
+    #dry_fruit_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top:566%;
+        background-color: #fff;
+    }
+    #vegetable_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top:630%;
+        background-color: #fff;
+    }
+    #vegetable_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:630%;
+        background-color: #fff;
+    }
+    #herb_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:690%;
+        background-color: #fff;
+    }
+    #herb_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top: 690%;
+        background-color: #fff;
+    }
+    #kitchen_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top: 755%;
+        background-color: #fff;
+    }
+    #kitchen_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:755%;
+        background-color: #fff;
+    }
+    #oils_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:815%;
+        background-color: #fff;
+    }
+    #oils_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top: 815%;
+        background-color: #fff;
+    }
+    #bev_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top: 875%;
+        background-color: #fff;
+    }
+    #bev_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top:875%;
+        background-color: #fff;
+    }
+   
 </style>
-<body>
-    <div id="modal_login">
-        <div id="mod">
-            <h5>Please enter your number</h5>
-            <input type="number" id="mobile"/>
-            <br><br>
-            <button id="otp">Get otp</button>
-          
+<body >
+    
+        <div id="modal_login">
+            <div id="mod">
+                <h5>Please enter your number</h5>
+                <input id="name_login" type="text" placeholder="enter your name" />
+                <br><br>
+                <input type="number" id="mobile" placeholder="enter your mobile number"/><br><br>
+                <button id="otp">Get otp</button>
+              
+            </div>
+            <div id="mod2">
+                <input type="number" placeholder="enter otp" id="otp_match" />
+                
+            </div>
+           
         </div>
-        <div id="mod2">
-            <input type="number" placeholder="enter otp" id="otp_match" />
+    
+    
+    <div id="navbar">
+        
+    </div>
+    <div id="modal2">
+        <div id="modal_container2">
             
+           
+            <div id="loc" class="mapouter"><div class="gmap_canvas"> <p id="back"><i class="fa-solid fa-arrow-left"></i></p><iframe width="500" height="250"  id="gmap_canvas"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+            <div id="current_img"><div id="back"><i class="fa-solid fa-arrow-left"></i></div><img id="loc_img" alt=""></div>
+            <div id="mapsearch"><input id="mapio" type="text" /><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div id="current_location"><span id="current"><i class="fa-solid fa-location-crosshairs"></i></span><p>use my current location</p></div>
+            <h3>Add Adress Details</h3>
+            <input id="city" type="text" class="address" placeholder="city"><br><br>
+            <input id="aline1" type="text" class="address" placeholder="address line 1"><br><br>
+            <input id="aline2" class="address" type="text" placeholder="address line 2"><br><br>
+            <button id="save_address">Save Details</button>
+
+
         </div>
-       
+    </div>
+    <div id="main_slide">
+        <div id="slide_top">
+
+        </div>
+        <div id="slide_const">
+            <img id="slide_const_img" class="img_slide" src="https://fraazo.com/static/Web1-cafcda6bf22c11e6bbaed467d13a0eb7.png" alt="">
+            <img id="slide_const_im" class="img_slide" src="https://fraazo.com/static/Web2-9a152d86240414d76ce205c491e47c4e.png" alt="">
+            <img id="slide_const_i"  class="img_slide"  src="https://fraazo.com/static/Web3-9f5a46f22ff99bcfe079257218356413.png" alt="">
+        </div>
+    </div>
+    <div id="cato_grid">
+        <h1 >Select Categories</h1>
+        <div id="append_grid"></div>
+    </div>
+    <div id="input_modal">
+
     </div>
     <div>
-        <p>
-            Fresh Fruits & Vegetables Grocery Shopping Online
-The quality of fruits & vegetables is synonymous with its freshness, while getting fresh fruits and vegetables is a tedious task at times but with Fraazo you can get it delivered at your doorstep. Fraazo brings a wide range of farm fresh fruits, vegetables and dairy products to you, all in just a click. We currently serve about more than 3lacs+ happy customers in Mumbai, Navi Mumbai, Thane, Kalyan-Dombivli and Virar. Fraazo has made online shopping of fresh produce much easier with its hassle-free home delivery options. You can choose the delivery slot as per your choice and schedule your order accordingly. Or you can simply opt for the option of 90 mins Express Delivery and get your order delivered in not more than 90 mins. The farm fresh fruits and vegetables on Fraazo are available at best prices compared to other vendors & supermarkets. Plus with so many exciting offers, one can save up to 20% on their Monthly grocery budgets. No need to wait in long queues in crowded supermarkets or local mandis for getting the best prices on veggies. Kick the stress out & just Fraazo your dose of freshness with savings at the comfort of your home. Fraazo directly sources fresh fruits and veggies from an extensive network of farmers across Maharashtra, hence bringing you fresh produce straight from farm to table in less than 12 hours. With our Safe & Hygienic packaging and minimal multiple handling, we ensure you get the best quality fresh produce.
-
-The fruits and vegetables are 100% hand-picked fresh from farm, while some products are hydroponically-grown. The wide range of fruits and veggies on Fraazo include more than 100+ farm fresh vegetables and fruits, starting from regular veggies like dudhi, cauliflower, beetroot, cabbage, etc. to exotic veggies like broccoli, lettuce etc. We also provide the essential vegetable combos like Onion, Potato, Tomato Combo, Salad Combo, Fresh Cut-Veg Combos or Fruit Combos like Banana, Apple Combo, & more. There are a lot of exciting deals on vegetables & fruits, every day of the week, the major highlights being Monday Mandi, Veggie Wednesday, Freelivery Thursday & Fruit Friday.For payments, you can choose from the multiple payment options as Fraazo accepts Debit card, Credit card, UPI options like iMobile, Google Pay, 8+ e-Wallet options like Phonepe, JioPay, MobiKwik, Sodexo, NetBanking and Cash on Delivery (COD). If you ever have an issue with missing items or any quality issue, you can raise your concern with us in 48 hrs & we shall refund/ replace your product with “no-questions-asked-policy”. You can simply connect with our Customer Support team via Chat Support or Call on 9152291522.
-        </p>
+        <h1 style="margin-left:25px;">Mangoes</h1>
+        <div class="mangoes" id="mangoes"></div>
     </div>
+    <div id="mangoes_back"><p id="backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="mangoes_forward"><p id="forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Fruits</h1>
+        <div class="mangoes" id="fruits"></div>
+    </div>
+    <div id="fruit_backward"><p id="f_backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="fruit_forward" ><p id="f_forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Dry Fruits</h1>
+        <div class="mangoes" id="dry_f"></div>
+    </div>
+    <div id="dry_fruit_backward"><p id="df_backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="dry_fruit_forward" ><p id="df_forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Vegetables</h1>
+        <div class="mangoes" id="vege"></div>
+    </div>
+    <div id="vegetable_backward"><p id="vbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="vegetable_forward" ><p id="vforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Herbs</h1>
+        <div class="mangoes" id="herb"></div>
+    </div>
+    <div id="herb_backward"><p id="hbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="herb_forward" ><p id="hforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Kitchen stamples</h1>
+        <div class="mangoes" id="kitchen"></div>
+    </div>
+    <div id="kitchen_backward"><p id="kbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="kitchen_forward" ><p id="kforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Oils</h1>
+        <div class="mangoes" id="oils"></div>
+    </div>
+    <div id="oils_backward"><p id="obackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="oils_forward" ><p id="oforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Beverages</h1>
+        <div class="mangoes" id="bev"></div>
+    </div>
+    <div id="bev_backward"><p id="bvbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="bev_forward" ><p id="bvforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    
 </body>
 </html>
-<script>
-    let mob;
+<script type="module">
+     import {navbar} from "./container/navbar.js"
+   document.getElementById("navbar").innerHTML=navbar();
+   
+   let create_ele = (w)=>{
+       return document.createElement(w);
+   }
+   let value_ele = (w)=>{
+       return document.getElementById(w).value;
+   }
+
+   let login = localStorage.getItem("mob")|| "username";
+   document.getElementById("barabar").innerText=login;
+   let y;
+   if(login!="username"){
+       document.getElementById("modal_login").style.display="none";
+       document.querySelector("body").style.backgroundColor="white";
+       
+       document.getElementById("input").style.backgroundColor="white";
+       let const_slide = document.querySelector("#slide_const").children;
+       
+            for(let i=0;i<const_slide.length;i++)
+            {
+                console.log(const_slide[i].id)
+                document.querySelector(`#${const_slide[i].id}`).style.filter="brightness(100%)"
+            }
+            y=true;
+            if(y){
+             document.querySelector("#slide_top").style.filter="brightness(100%)"
+            
+        }
+        document.getElementById("cato_grid").style.filter="brightness(100%)"
+       
+   }
+   else{
+    let const_slide = document.querySelector("#slide_const").children;
+       
+       for(let i=0;i<const_slide.length;i++)
+       {
+           console.log(const_slide[i].id)
+           document.querySelector(`#${const_slide[i].id}`).style.filter="brightness(50%)"
+       }
+       y=false;
+            if(!y){
+             document.querySelector("#slide_top").style.filter="brightness(50%)"
+            
+        }
+        document.getElementById("cato_grid").style.filter="brightness(50%)"
+   }
+   
+    
     document.getElementById("otp").addEventListener("click",my1)
     
     function my1(){
-        mob = document.getElementById("otp").value;
+        let mob;
+        mob = document.getElementById("name_login").value;
         let ot="";
         for(let i=0;i<6;i++)
         {
@@ -96,6 +624,26 @@ The fruits and vegetables are 100% hand-picked fresh from farm, while some produ
                 if(Number(ot)==Number(a)){
                     document.getElementById("modal_login").style.display="none";
                     document.querySelector("body").style.backgroundColor = "white";
+                    document.getElementById("input").style.backgroundColor="white";
+                    document.getElementById("barabar").innerText=mob;
+                    
+                   
+                    localStorage.setItem("mob",mob);
+                    let const_slide = document.querySelector("#slide_const").children;
+       
+                    for(let i=0;i<const_slide.length;i++)
+                    {
+                        console.log(const_slide[i].id)
+                        document.querySelector(`#${const_slide[i].id}`).style.filter="brightness(100%)"
+                    }
+                    document.getElementById("cato_grid").style.filter="brightness(100%)"
+                    y=true;
+                    if(y){
+                    document.querySelector("#slide_top").style.filter="brightness(100%)"
+                    
+                }
+                    
+                   
 
 
                 }
@@ -109,12 +657,763 @@ The fruits and vegetables are 100% hand-picked fresh from farm, while some produ
         });
 
     }
+    import {displaymap,current_location_show} from "./container/fetch.js";
 
+    let location_display= (e)=>{
+        if(e.key=="Enter"){
+            let name_of_city = document.getElementById("mapio").value;
+            document.getElementById("current_img").style.display="none";
+            document.getElementById("loc").style.display="block";
+            displaymap(name_of_city,"gmap_canvas")
+            document.getElementById("city").value=name_of_city;
+        }
+    }
 
-    let geo= ()=>{
+    document.getElementById("mapio").addEventListener("keydown",location_display);
+
+    let current_location_display = ()=>{
+        document.getElementById("loc").style.display="none";
+        document.getElementById("current_img").style.display="block";
+        document.getElementById("mapio").value=null;
+        document.getElementById("city").value=null;
+        current_location_show("loc_img");
         
     }
+
+    document.getElementById("current_location").addEventListener("click",current_location_display)
+    current_location_show("loc_img");
+  
     
+    // document.getElementById("back").addEventListener("click",mapclose)
+    var x = document.querySelector("#back")
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="back")
+        {
+            document.getElementById("modal2").style.display="none";
+            document.querySelector("body").style.backgroundColor="white";
+            document.getElementById("input").style.backgroundColor="white";
+            y=false;
+            let const_slide = document.querySelector("#slide_const").children;
+       
+            for(let i=0;i<const_slide.length;i++)
+            {
+                console.log(const_slide[i].id)
+                document.querySelector(`#${const_slide[i].id}`).style.filter="brightness(100%)"
+            }
+            if(!y){
+             document.querySelector("#slide_top").style.filter="brightness(100%)"
+            
+            }
+            document.getElementById("cato_grid").style.filter="brightness(100%)"
+            
+           
+        
+           
+            console.log("x");
+        } 
+     
+        
+    })
    
+    // document.getElementById("back").addEventListener("click",mapclose)
+    // function mapclose(){
+    //     document.getElementById("modal2").style.display="none";
+    //     document.querySelector("body").style.backgroundColor="white";
+    //     console.log("y")
+    // }
+    document.getElementById("mymap").addEventListener("click",mapopen);
+    function mapopen(){
+        document.querySelector("#modal2").style.display="block";
+        document.querySelector("body").style.backgroundColor="rgba(0, 0, 0, 0.8)";
+        document.getElementById("input").style.backgroundColor="rgb(119, 111, 111)";
+        let const_slide = document.querySelector("#slide_const").children;
+       
+        for(let i=0;i<const_slide.length;i++)
+        {
+            console.log(const_slide[i].id)
+            document.querySelector(`#${const_slide[i].id}`).style.filter="brightness(50%)"
+        }
+        y=true;
+        if(y){
+             document.querySelector("#slide_top").style.filter="brightness(50%)"
+            
+        }
+        document.getElementById("cato_grid").style.filter="brightness(50%)"
+        
+        
+    }
+
+    document.getElementById("save_address").addEventListener("click",function(){
+        let address_city = document.getElementById("city").value;
+        let address_line1 = document.getElementById("aline1").value;
+        let address_line2 = document.getElementById("aline2").value;
+        let obj_address ={
+            city:address_city,
+            address_line1 :address_line1,
+            address_line2:address_line2,
+        }
+        localStorage.setItem("address",JSON.stringify(obj_address))
+    })
+    document.getElementById("img").addEventListener("click",function(){
+        window.location.href="index.html";
+    })
+    document.getElementById("cart_home").addEventListener("click",function(){
+        window.location.href="cart.html";
+    })
+    document.getElementById("wallet").addEventListener("click",function(){
+        window.location.href="wallet.html";
+    })
+
+    let array_slide_show = [{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/2086.png?1651783992",ids:"fruits"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/2088.png?1651784120",ids:"fruits"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/2711.png?1651784339",ids:"fruits"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/002/646/original/data?1641547962",ids:"health"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/006/715/original/data?1649312990",ids:"oils"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/493/original/data?1648711157",ids:"baby_care"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/005/821/original/data?1648822910",ids:"dry_fruits"},
+    {img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/288/original/data?1646028681",ids:"kitchen_staples"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/003/839/original/data?1645621614",ids:"biscutes"},{img:"https://s3.ap-south-1.amazonaws.com/fraazo-prod/images/images/000/004/520/original/data?1647415635",ids:"cleaning"}];
+
+    let slide_show =()=>{
+        let i=0;
+        setInterval(()=>{
+            document.getElementById("slide_top").innerHTML=null;
+            if(i==array_slide_show.length){i=0};
+            // console.log(i)
+            let img1 = document.createElement("img");
+            img1.src = array_slide_show[i].img;
+            img1.style.width="100%";
+            img1.style.height="100%";
+            
+            let a= array_slide_show[i],ids;
+            img1.addEventListener("click",()=>{
+                slide_nextpage(a)
+            })
+            document.getElementById("slide_top").append(img1);
+            i++;
+        },3000)
+
+        let slide_nextpage= (a)=>{
+            let n = `${a}.html`;
+            window.location.href=n;
+        }
+
+
+    }
+    slide_show();
+    let data_img_grid = ["https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/298.png?1647330831","https://fraazo-master.s3.ap-south-1.amazonaws.com/webban/Fruits.png","https://fraazo-master.s3.ap-south-1.amazonaws.com/webban/Vegetables.png",
+"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/1.png?1619161151","https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/201.png?1635224001","https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/199.png?1635058415",
+"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/246.png?1638598954","https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/244.png?1638598841","https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/256.png?1638599155",
+"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/240.png?1638614942","https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/237.png?1638598539","https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/260.png?1638599575",
+"https://s3.ap-south-1.amazonaws.com/fraazo-prod/web/236.png?1638601164"];
+    let name_of_grid = ['mangoes', 'fruit', 'vegetables', 'herbs', 'dry_fruits', 'kitchen_Staples', 'oils', 'biscutes', 'breakfast', 'beverages', 'cleaning', 'personal_care', 'health', 'baby_care']
+    let items = JSON.parse(localStorage.getItem("items"));
+  
+    // console.log(data_img.length,data_items.length)
+    let grid_front_page =  (photo,name_of_grid)=>{
+        
+        photo.forEach((el,index)=>{
+            let div1 = create_ele("div");
+            let img1 = create_ele("img");
+            img1.src= el;
+            img1.style.width="100%";
+            img1.style.height="60%";
+            let a = name_of_grid[index];
+            img1.addEventListener("click",()=>{
+                catogories_grid(a);
+            })
+           
+            div1.append(img1);
+            document.getElementById("append_grid").append(div1);
+        })
+       
+    }
+
+    function catogories_grid(a){
+        window.location.href=`${a}.html`;
+    }
+    grid_front_page(data_img_grid,name_of_grid)
+
+
+
+// upper debounce
+ 
+    
+    
+    let top_input_debounce;
+    let arr_debounce=[];
+    let count =0
+    function my_de(){
+        let val = document.getElementById("input").value;
+        val = val.toLowerCase();
+        // console.log(val);
+        count=count+1;
+        let input_len = val.length;
+
+        let key = Object.keys(items);
+        console.log(key.length)
+        if(input_len==""||input_len==null||input_len==undefined)
+        {
+            document.getElementById("input_modal").innerHTML=null; 
+            return;
+        }
+        
+       
+        if(count==1)
+        {
+            for(let i=0;i<key.length;i++)
+            {
+            
+                
+                let b = key[i].toLowerCase();
+                let c = b.split("_");
+                b = c.join(" ");
+                arr_debounce.push(b);
+                
+            
+                
+                for(let j=0;j<items[key[i]].length;j++)
+                {
+                    let str = items[key[i]][j].name;
+                    let str1 = str.toLowerCase();
+                    str = str1.split("-");
+                    str = str.join(" ");
+                    arr_debounce.push(str);
+                    
+                }
+                // console.log(arr.join(""));
+                
+
+                
+            }
+        }
+        function check(arr,input_len,val)
+        {
+            document.getElementById("input_modal").innerHTML=null;
+            let str = arr
+            for(let i=0;i<arr.length;i++)
+            {
+                let bag="";
+                for(let j=0;j<input_len;j++){
+                    bag+=arr[i][j];
+                }
+                if(bag==val)
+                {
+                    console.log(arr[i]);
+                    let p1 = document.createElement("p");
+                    p1.innerText=arr[i];
+                    p1.addEventListener("click",()=>{
+                        page(arr[i]);
+                    })
+                    document.getElementById("input_modal").append(p1);
+                }
+                
+            }
+
+        }
+        check(arr_debounce,input_len,val)
+        
+
+    }
+    function page(s){
+        let key = Object.keys(items);
+        
+        for(let i=0;i<key.length;i++)
+            {
+                let arr=[];
+            
+                
+                let b = key[i].toLowerCase();
+                let c = b.split("_");
+                b = c.join(" ");
+                arr.push(b);
+                
+            
+                
+                for(let j=0;j<items[key[i]].length;j++)
+                {
+                    let str = items[key[i]][j].name;
+                    let str1 = str.toLowerCase();
+                    str = str1.split("-");
+                    str = str.join(" ");
+                    arr.push(str);
+                    
+                }
+                for(let k=0;k<arr.length;k++)
+                {
+                    if(s==arr[k])
+                    {
+                        if(key[i]=="Dry_Fruits") window.location.href="dry_fruit.html";
+                        else if(key[i]=="fruits") window.location.href="fruit.html";
+                        else{
+                            
+                        window.location.href=`${key[i]}.html`
+                        }
+                        return;
+                    }
+                }
+        }
+    }
+
+    function debounce(func,delay)
+    {
+        if(top_input_debounce){
+            clearTimeout(top_input_debounce)
+        }
+        top_input_debounce=setTimeout(()=>{
+            func();
+        },delay)
+    }
+
+    let de = ()=>{
+        debounce(my_de,1000);
+    }
+
+    document.getElementById("input").addEventListener("input",de);
+
+    // Mango list
+    let create = (w)=>{
+        return document.createElement(w);
+    }
+    let front_mango =0;
+    let rear_mango =4;
+    let array_mango = items["mangoes"];
+   
+    let arr_mango=[];
+    for(let i=0;i<=rear_mango;i++)
+    {
+        arr_mango.push(array_mango[i])
+    }
+    console.log(array_mango,arr_mango)
+    function display_slide_button(arr,w){
+        document.getElementById(w).innerHTML=null;
+        arr.forEach((el)=>{
+            let div2 = create("div");
+            div2.style.width="20%";
+            div2.setAttribute("class","elements")
+            let img = create("img");
+            img.src = el.src;
+            img.style.width="100%";
+            img.style.height="70%"
+            let p1 = create("p");
+            let div1 = create("div");
+            div1.style.display ="flex";
+            div1.style.justifyContent ="space-around";
+            p1.innerText = el.name;
+            let p2 =create("p");
+            p2.innerText= `Rs 100/-`
+            div1.append(p1,p2);
+            div2.append(img,div1);
+            document.getElementById(w).append(div2);
+        })
+    }
+
+    display_slide_button(arr_mango,"mangoes")
+
+    let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="forward"){
+            console.log("ok")
+            
+            if(rear_mango<array_mango.length-1){
+                rear_mango=rear_mango+1;
+                front_mango=front_mango+1;
+                arr_mango.shift();
+                arr_mango.push(array_mango[rear_mango]);
+                display_slide_button(arr_mango,"mangoes");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="backward")
+        {
+          
+            
+            if(front_mango>0)
+            {
+                front_mango=front_mango-1;
+                rear_mango=rear_mango-1;
+               
+                arr_mango.pop();
+                arr_mango.unshift(array_mango[front_mango])
+                display_slide_button(arr_mango,"mangoes");
+            }
+        }
+    })
+    document.getElementById("mangoes").addEventListener("click",function(){
+        window.location.href="mangoes.html"
+    })
+
+    // fruits
+
+    
+    let front_fruit =0;
+    let rear_fruit =4;
+    let array_fruit = items["fruits"];
+   
+    let arr_fruit=[];
+    for(let i=0;i<=rear_fruit;i++)
+    {
+        arr_fruit.push(array_fruit[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_fruit,"fruits")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="f_forward"){
+            console.log("ok")
+            
+            if(rear_fruit<array_fruit.length-1){
+                rear_fruit=rear_fruit+1;
+                front_fruit=front_fruit+1;
+                arr_fruit.shift();
+                arr_fruit.push(array_fruit[rear_fruit]);
+                display_slide_button(arr_fruit,"fruits");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="f_backward")
+        {
+          
+            console.log("fb")
+            if(front_fruit>0)
+            {
+                front_fruit=front_fruit-1;
+                rear_fruit=rear_fruit-1;
+               
+                arr_fruit.pop();
+                arr_fruit.unshift(array_fruit[front_fruit])
+                display_slide_button(arr_fruit,"fruits");
+            }
+        }
+    })
+    document.getElementById("fruits").addEventListener("click",function(){
+        window.location.href="fruits.html"
+    })
+    
+
+// dry fruits
+
+let front_dfruit =0;
+    let rear_dfruit =4;
+    let array_dfruit = items["Dry_Fruits"];
+   
+    let arr_dfruit=[];
+    for(let i=0;i<=rear_fruit;i++)
+    {
+        arr_dfruit.push(array_dfruit[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_dfruit,"dry_f")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="df_forward"){
+            console.log("ok")
+            
+            if(rear_dfruit<array_dfruit.length-1){
+                rear_dfruit=rear_dfruit+1;
+                front_dfruit=front_dfruit+1;
+                arr_dfruit.shift();
+                arr_dfruit.push(array_dfruit[rear_dfruit]);
+                display_slide_button(arr_dfruit,"dry_f");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="df_backward")
+        {
+          
+            console.log("fb")
+            if(front_dfruit>0)
+            {
+                front_dfruit=front_dfruit-1;
+                rear_dfruit=rear_dfruit-1;
+               
+                arr_dfruit.pop();
+                arr_dfruit.unshift(array_dfruit[front_dfruit])
+                display_slide_button(arr_dfruit,"dry_f");
+            }
+        }
+    })
+    document.getElementById("dry_f").addEventListener("click",function(){
+        window.location.href="dry_fruit.html"
+    })
+    
+
+    // vegetables
+
+    let front_vege =0;
+    let rear_vege =4;
+    let array_vege = items["vegetables"];
+   
+    let arr_vege=[];
+    for(let i=0;i<=rear_vege;i++)
+    {
+        arr_vege.push(array_vege[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_vege,"vege")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="vforward"){
+            console.log("ok")
+            
+            if(rear_vege<array_vege.length-1){
+                rear_vege=rear_vege+1;
+                front_vege=front_vege+1;
+                arr_vege.shift();
+                arr_vege.push(array_vege[rear_vege]);
+                display_slide_button(arr_vege,"vege");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="vbackward")
+        {
+          
+            console.log("fb")
+            if(front_vege>0)
+            {
+                front_vege=front_vege-1;
+                rear_vege=rear_vege-1;
+               
+                arr_vege.pop();
+                arr_vege.unshift(array_vege[front_vege])
+                display_slide_button(arr_vege,"vege");
+            }
+        }
+    })
+    document.getElementById("vege").addEventListener("click",function(){
+        window.location.href="vegetables.html"
+    })
+
+    // herb
+
+    let front_herb =0;
+    let rear_herb =4;
+    let array_herb = items["herbs"];
+   
+    let arr_herb=[];
+    for(let i=0;i<=rear_herb;i++)
+    {
+        arr_herb.push(array_herb[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_herb,"herb")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="hforward"){
+            console.log("ok")
+            
+            if(rear_herb<array_herb.length-1){
+                rear_herb=rear_herb+1;
+                front_herb=front_herb+1;
+                arr_herb.shift();
+                arr_herb.push(array_herb[rear_herb]);
+                display_slide_button(arr_herb,"herb");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="hbackward")
+        {
+          
+            console.log("fb")
+            if(front_herb>0)
+            {
+                front_herb=front_herb-1;
+                rear_herb=rear_herb-1;
+               
+                arr_herb.pop();
+                arr_herb.unshift(array_herb[front_herb])
+                display_slide_button(arr_herb,"herb");
+            }
+        }
+    })
+    document.getElementById("herb").addEventListener("click",function(){
+        window.location.href="herbs.html"
+    })
+
+
+    // kitchen_stamples
+
+    let front_kitchen =0;
+    let rear_kitchen =4;
+    let array_kitchen = items["kitchen_staples"];
+   
+    let arr_kitchen=[];
+    for(let i=0;i<=rear_kitchen;i++)
+    {
+        arr_kitchen.push(array_kitchen[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_kitchen,"kitchen")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="kforward"){
+            console.log("ok")
+            
+            if(rear_kitchen<array_kitchen.length-1){
+                rear_kitchen=rear_kitchen+1;
+                front_kitchen=front_kitchen+1;
+                arr_kitchen.shift();
+                arr_kitchen.push(array_kitchen[rear_kitchen]);
+                display_slide_button(arr_kitchen,"kitchen");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="kbackward")
+        {
+          
+            console.log("fb")
+            if(front_kitchen>0)
+            {
+                front_kitchen=front_kitchen-1;
+                rear_kitchen=rear_kitchen-1;
+               
+                arr_kitchen.pop();
+                arr_kitchen.unshift(array_kitchen[front_kitchen])
+                display_slide_button(arr_kitchen,"kitchen");
+            }
+        }
+    })
+    document.getElementById("kitchen").addEventListener("click",function(){
+        window.location.href="kitchen_staples.html"
+    })
+
+    // oils
+
+    let front_oils =0;
+    let rear_oils =4;
+    let array_oils = items["oils"];
+   
+    let arr_oils=[];
+    for(let i=0;i<=rear_oils;i++)
+    {
+        arr_oils.push(array_oils[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_oils,"oils")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="oforward"){
+            console.log("ok")
+            
+            if(rear_oils<array_oils.length-1){
+                rear_oils=rear_oils+1;
+                front_oils=front_oils+1;
+                arr_oils.shift();
+                arr_oils.push(array_oils[rear_oils]);
+                display_slide_button(arr_oils,"oils");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="obackward")
+        {
+          
+            console.log("fb")
+            if(front_oils>0)
+            {
+                front_oils=front_oils-1;
+                rear_oils=rear_oils-1;
+               
+                arr_oils.pop();
+                arr_oils.unshift(array_oils[front_oils])
+                display_slide_button(arr_oils,"oils");
+            }
+        }
+    })
+    document.getElementById("oils").addEventListener("click",function(){
+        window.location.href="oils.html"
+    })
+
+    // Beverages
+
+    let front_bev =0;
+    let rear_bev =4;
+    let array_bev = items["beverages"];
+   
+    let arr_bev=[];
+    for(let i=0;i<=rear_bev;i++)
+    {
+        arr_bev.push(array_bev[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_bev,"bev")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="bvforward"){
+            console.log("ok")
+            
+            if(rear_bev<array_bev.length-1){
+                rear_bev=rear_bev+1;
+                front_bev=front_bev+1;
+                arr_bev.shift();
+                arr_bev.push(array_bev[rear_bev]);
+                display_slide_button(arr_bev,"bev");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="bvbackward")
+        {
+          
+            console.log("fb")
+            if(front_bev>0)
+            {
+                front_bev=front_bev-1;
+                rear_bev=rear_bev-1;
+               
+                arr_bev.pop();
+                arr_bev.unshift(array_bev[front_bev])
+                display_slide_button(arr_bev,"bev");
+            }
+        }
+    })
+    document.getElementById("bev").addEventListener("click",function(){
+        window.location.href="beverages.html"
+    })
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+    
+  
     
 </script>
