@@ -1,0 +1,55 @@
+#footer{
+   height: 800px;
+   width: 100%;
+ 
+   margin-top: 80px;
+   background-image: url(/super.jpg);
+   background-repeat: no-repeat;
+ background-size: cover;
+ display:flex;
+}
+
+#s1,#s2,#s3,#s4{
+    height: 300px;
+    width: 300px;
+    
+    margin-top: 150px;
+    margin-left: 6px;
+}
+p{
+    font-size: 20px;
+    color: aliceblue;
+}
+#s2,#s3,#s4{
+    margin-left: 8%;
+}
+#s2>h3{
+    text-align: center;
+    color: aliceblue;
+}#s2>p,#s4>p{
+    text-align: center;
+}
+#s3,#s4{
+    height: 500px;
+}
+#s3>h3,#s4>h3{
+    text-align: center;
+    color: aliceblue;
+}
+#s3>p,#s4>p{
+    text-align: center;
+    padding-top: 15px;
+}
+#download{
+    display: flex;
+}
+#download>div{
+    height: 50px;
+    width: 40%;
+    margin: auto;
+ 
+}
+#download>div>img{
+    height: 100%;
+    width: 100%;
+}
