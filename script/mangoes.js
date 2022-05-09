@@ -51,3 +51,12 @@ let mango_data=({src,name,price})=>{
 
 
 document.getElementById("cart_no").innerText=arr.length
+document.getElementById("cart_home").addEventListener("click",function(){
+    window.location.href="checkout.html";
+})
+document.getElementById("img").addEventListener("click",function(){
+    window.location.href="index.html";
+})
+document.getElementById("wallet").addEventListener("click",function(){
+    window.location.href="wallet.html";
+})
