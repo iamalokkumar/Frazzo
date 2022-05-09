@@ -243,7 +243,8 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:445%;
+        /* top:445%; */
+        /* margin-top: 35px; */
         background-color: #fff;
       
        /* background-clip: padding-box; */
@@ -262,7 +263,8 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top:445%;
+        /* margin-top: 35px; */
+        /* top:445%; */
         background-color: #fff;
     }
    
@@ -283,7 +285,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top:505%;
+        /* top:505%; */
         background-color: #fff;
     }
     #fruit_backward{
@@ -295,7 +297,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:505%;
+        /* top:505%; */
         background-color: #fff;
     }
     #dry_fruit_backward{
@@ -307,7 +309,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:565%;
+        /* top:565%; */
         background-color: #fff;
     }
     #dry_fruit_forward{
@@ -319,7 +321,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top:565%;
+        /* top:565%; */
         background-color: #fff;
     }
     #vegetable_forward{
@@ -331,7 +333,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top:630%;
+        /* top:630%; */
         background-color: #fff;
     }
     #vegetable_backward{
@@ -343,7 +345,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:630%;
+        /* top:630%; */
         background-color: #fff;
     }
     #herb_backward{
@@ -355,7 +357,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top: 690%;
+        /* top: 690%; */
         background-color: #fff;
     }
     #herb_forward{
@@ -367,7 +369,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 690%;
+        /* top: 690%; */
         background-color: #fff;
     }
     #kitchen_forward{
@@ -379,7 +381,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top:750%;
+        /* top:750%; */
         background-color: #fff;
     }
     #kitchen_backward{
@@ -391,7 +393,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:750%;
+        /* top:750%; */
         background-color: #fff;
     }
     #oils_backward{
@@ -403,7 +405,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top: 811%;
+        /* top: 811%; */
         background-color: #fff;
     }
     #oils_forward{
@@ -415,7 +417,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 811%;
+        /* top: 811%; */
         background-color: #fff;
     }
     #bev_forward{
@@ -427,7 +429,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 870%;
+        /* top: 870%; */
         background-color: #fff;
     }
     #bev_backward{
@@ -439,7 +441,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top: 870%;
+        /* top: 870%; */
         background-color: #fff;
     }
     #clean_forward{
@@ -451,7 +453,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 933%;
+        /* top: 933%; */
         background-color: #fff;
     }
     #clean_backward{
@@ -463,7 +465,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top: 933%;
+        /* top: 933%; */
         background-color: #fff;
     }
     #health_forward{
@@ -475,7 +477,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 995%;
+        /* top: 995%; */
         background-color: #fff;
     }
     #health_backward{
@@ -487,8 +489,14 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top: 995%;
+        /* top: 995%; */
         background-color: #fff;
+    }
+    .change{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
     }
    
 </style>
@@ -548,66 +556,90 @@
     <div id="input_modal">
 
     </div>
-    <div>
-        <h1 style="margin-left:25px;">Mangoes</h1>
-        <div class="mangoes" id="mangoes"></div>
+    <div class="change">
+        <div style="width:100%;">
+            <h1 style="margin-left:25px;">Mangoes</h1>
+            <div class="mangoes" id="mangoes"></div>
+        </div>
+        <div id="mangoes_back"><p id="backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="mangoes_forward"><p id="forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="mangoes_back"><p id="backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="mangoes_forward"><p id="forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Fruits</h1>
-        <div class="mangoes" id="fruits"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Fruits</h1>
+            <div class="mangoes" id="fruits"></div>
+        </div>
+        <div id="fruit_backward"><p id="f_backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="fruit_forward" ><p id="f_forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="fruit_backward"><p id="f_backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="fruit_forward" ><p id="f_forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Dry Fruits</h1>
-        <div class="mangoes" id="dry_f"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Dry Fruits</h1>
+            <div class="mangoes" id="dry_f"></div>
+        </div>
+        <div id="dry_fruit_backward"><p id="df_backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="dry_fruit_forward" ><p id="df_forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="dry_fruit_backward"><p id="df_backward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="dry_fruit_forward" ><p id="df_forward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Vegetables</h1>
-        <div class="mangoes" id="vege"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Vegetables</h1>
+            <div class="mangoes" id="vege"></div>
+        </div>
+        <div id="vegetable_backward"><p id="vbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="vegetable_forward" ><p id="vforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="vegetable_backward"><p id="vbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="vegetable_forward" ><p id="vforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Herbs</h1>
-        <div class="mangoes" id="herb"></div>
+   
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Herbs</h1>
+            <div class="mangoes" id="herb"></div>
+        </div>
+        <div id="herb_backward"><p id="hbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="herb_forward" ><p id="hforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="herb_backward"><p id="hbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="herb_forward" ><p id="hforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Kitchen stamples</h1>
-        <div class="mangoes" id="kitchen"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Kitchen stamples</h1>
+            <div class="mangoes" id="kitchen"></div>
+        </div>
+        <div id="kitchen_backward"><p id="kbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="kitchen_forward" ><p id="kforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="kitchen_backward"><p id="kbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="kitchen_forward" ><p id="kforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Oils</h1>
-        <div class="mangoes" id="oils"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Oils</h1>
+            <div class="mangoes" id="oils"></div>
+        </div>
+        <div id="oils_backward"><p id="obackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="oils_forward" ><p id="oforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="oils_backward"><p id="obackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="oils_forward" ><p id="oforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Beverages</h1>
-        <div class="mangoes" id="bev"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Beverages</h1>
+            <div class="mangoes" id="bev"></div>
+        </div>
+        <div id="bev_backward"><p id="bvbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="bev_forward" ><p id="bvforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="bev_backward"><p id="bvbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="bev_forward" ><p id="bvforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Cleaning</h1>
-        <div class="mangoes" id="clean"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Cleaning</h1>
+            <div class="mangoes" id="clean"></div>
+        </div>
+        <div id="clean_backward"><p id="clbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="clean_forward" ><p id="clforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="clean_backward"><p id="clbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="clean_forward" ><p id="clforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    <div>
-        <h1 style="margin-left:25px;">Health</h1>
-        <div class="mangoes" id="health"></div>
+    <div class="change">
+        <div style="width: 100%;">
+            <h1 style="margin-left:25px;">Health</h1>
+            <div class="mangoes" id="health"></div>
+        </div>
+        <div id="health_backward"><p id="hlbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+        <div id="health_forward" ><p id="hlforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
     </div>
-    <div id="health_backward"><p id="hlbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
-    <div id="health_forward" ><p id="hlforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div style="margin-top: 80px;">
+        <img width="100%" src="./main.PNG" alt="" >
+    </div>
     <div id="footer" style="width: 100%;height:500px"></div>
 </body>
 </html>
