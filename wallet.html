@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./container/navbar.css">
+</head>
+<script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        #input{
+            background-color: #fff;
+        }
+        .pay_option{
+           
+            color: white;
+            width: 100%;
+            height: 50%;
+            
+            /* line-height: none; */
+            
+          
+          
+        }
+        #credit{
+            margin-top: 0;
+            line-height: 1px;
+            margin-bottom: 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: teal;
+        }
+        #upi{
+            margin-top: 0;
+            line-height: 1px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: teal;
+        }
+        .pay_option:hover{
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            margin-top: 1px;
+            line-height: 0;
+        }
+        #main_details{
+            display: flex;
+            margin: auto;
+            width: 70%;
+            height: 500px;
+            margin-top: 100px;
+            border: 1px solid red;
+        }
+        #payment_option{
+            width: 30%;
+            border: 1px solid;
+            height: 100%;
+            margin-top: 1px;
+            line-height: 0;
+            /* background-color: teal; */
+        }
+        h2{
+            text-align: center;
+            margin-top: 120px;
+        }
+        #card_details,#get_otp,#upi_details,#get_otp_upi{
+            display: none;
+            margin-left: 20px;
+        }
+        #get_otp,#get_otp_upi{
+            margin-top: 20px;
+        }
+    </style>
+<body>
+    <div id="navbar">
+
+    </div>
+    <div id="main_details">
+        <div id="payment_option">
+            <h2 class="pay_option" id="credit" > By Credit\Debit card</h2>
+            <h2 class="pay_option" id="upi">By UPI</h2>
+        </div>
+        <div id="append_card_details">
+            <div id="card_details">
+                <h3>Enter your Name </h3>
+                <input type="text" />
+                <h3>Enter your card number</h3>
+                <input type="number" placeholder="card number" />
+                <h3>Please select Epiry Date</h3>
+                <input type="date" />
+                <h3>Enter amount</h3>
+                <input type="number" id="amount1" />
+                <h3>Enter your Mobile number</h3>
+                <input type="number" />
+                <br>
+                <br>
+                <button id="generate_otp">Get otp</button>
+            </div>
+            <div id="get_otp">
+                <h3>Enter otp</h3>
+                <input id="card_otp" type="number" />
+                <br>
+                <br>
+                <button id="match_otp">Submit</button>
+
+            </div>
+            <div id="upi_details">
+                <h3>Enter your register mobile numbr</h3>
+                <input type="email" />
+                <br>
+                <h3>Enter amount</h3>
+                <input type="number" id="amount2">
+                <br>
+                <button id="generate_otp_upi">Ok</button>
+
+            </div>
+            <div id="get_otp_upi">
+                <h3>Enter otp</h3>
+                <input id="upi_otp" type="number" />
+                <br><br>
+                <button id="match_otp_upi">Submit</button>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
+<script type="module">
+    import {navbar} from "./container/navbar.js"
+    document.getElementById("navbar").innerHTML=navbar();
+
+    document.getElementById("img").addEventListener("click",function(){
+        window.location.href="index.html";
+    })
+
+    let otp="";
+    let money;
+    document.getElementById("credit").addEventListener("click",function(){
+       document.getElementById("card_details").style.display="block";
+
+
+    })
+    let wallet_local = localStorage.getItem("wallet_amount") || 0;
+    document.getElementById("wallet_money").innerText=localStorage.getItem("wallet_amount");
+    document.getElementById("generate_otp").addEventListener("click",function(){
+        document.getElementById("card_details").style.display="none";
+        document.getElementById("get_otp").style.display="block";
+        money =0;
+        money = Number(wallet_local) + Number(document.getElementById("amount1").value);
+        otp="";
+        for(let i=0;i<6;i++)
+        {
+            otp += (Math.floor(Math.random()*10));
+        }
+        alert(otp);
+    })
+    document.getElementById("match_otp").addEventListener("click",function(){
+         let a = document.getElementById("card_otp").value;
+         if(a==otp)
+         {
+             alert("Transiction successful")
+             localStorage.setItem("wallet_amount",money);
+             document.getElementById("wallet_money").innerText=localStorage.getItem("wallet_amount");
+             otp="";
+             
+             document.getElementById("get_otp").style.display="none";
+             
+         }
+         else alert("enter a right otp")
+
+    })
+    document.getElementById("upi").addEventListener("click",function(){
+        document.getElementById("upi_details").style.display="block";
+
+
+    })
+    document.getElementById("generate_otp_upi").addEventListener("click",function(){
+        document.getElementById("upi_details").style.display="none";
+        document.getElementById("get_otp_upi").style.display="block";
+        money =0;
+        money = Number(document.getElementById("amount2").value) + Number(wallet_local);
+        otp="";
+        for(let i=0;i<6;i++)
+        {
+            otp += (Math.floor(Math.random()*10));
+        }
+        alert(otp);
+
+    })
+    document.getElementById("match_otp_upi").addEventListener("click",function(){
+       let ab = document.getElementById("upi_otp").value;
+       if(ab==otp){
+             alert("Transiction successful")
+             localStorage.setItem("wallet_amount",money);
+             document.getElementById("wallet_money").innerText=localStorage.getItem("wallet_amount");
+             otp="";
+             money =0;
+             document.getElementById("get_otp_upi").style.display="none";
+
+       }
+
+    })
+
+    
+</script>

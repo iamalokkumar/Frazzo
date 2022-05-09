@@ -307,7 +307,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:566%;
+        top:565%;
         background-color: #fff;
     }
     #dry_fruit_forward{
@@ -319,7 +319,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top:566%;
+        top:565%;
         background-color: #fff;
     }
     #vegetable_forward{
@@ -355,7 +355,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:690%;
+        top: 690%;
         background-color: #fff;
     }
     #herb_forward{
@@ -379,7 +379,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 755%;
+        top:750%;
         background-color: #fff;
     }
     #kitchen_backward{
@@ -391,7 +391,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:755%;
+        top:750%;
         background-color: #fff;
     }
     #oils_backward{
@@ -403,7 +403,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:815%;
+        top: 811%;
         background-color: #fff;
     }
     #oils_forward{
@@ -415,7 +415,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 815%;
+        top: 811%;
         background-color: #fff;
     }
     #bev_forward{
@@ -427,7 +427,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:95%;
-        top: 875%;
+        top: 870%;
         background-color: #fff;
     }
     #bev_backward{
@@ -439,7 +439,55 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        opacity: 1;
         left:1.5%;
-        top:875%;
+        top: 870%;
+        background-color: #fff;
+    }
+    #clean_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top: 933%;
+        background-color: #fff;
+    }
+    #clean_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top: 933%;
+        background-color: #fff;
+    }
+    #health_forward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:95%;
+        top: 995%;
+        background-color: #fff;
+    }
+    #health_backward{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       opacity: 1;
+        left:1.5%;
+        top: 995%;
         background-color: #fff;
     }
    
@@ -548,12 +596,26 @@
     </div>
     <div id="bev_backward"><p id="bvbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
     <div id="bev_forward" ><p id="bvforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
-    
+    <div>
+        <h1 style="margin-left:25px;">Cleaning</h1>
+        <div class="mangoes" id="clean"></div>
+    </div>
+    <div id="clean_backward"><p id="clbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="clean_forward" ><p id="clforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div>
+        <h1 style="margin-left:25px;">Health</h1>
+        <div class="mangoes" id="health"></div>
+    </div>
+    <div id="health_backward"><p id="hlbackward" style="text-align: center;"><i class="fa-solid fa-angle-left"></i></p></div>
+    <div id="health_forward" ><p id="hlforward" style="text-align: center;"><i class="fa-solid fa-angle-right"></i></p></div>
+    <div id="footer" style="width: 100%;height:500px"></div>
 </body>
 </html>
 <script type="module">
      import {navbar} from "./container/navbar.js"
    document.getElementById("navbar").innerHTML=navbar();
+   let wallet_local = localStorage.getItem("wallet_amount") || 0;
+    document.getElementById("wallet_money").innerText=localStorage.getItem("wallet_amount");
    
    let create_ele = (w)=>{
        return document.createElement(w);
@@ -1398,6 +1460,110 @@ let front_dfruit =0;
     document.getElementById("bev").addEventListener("click",function(){
         window.location.href="beverages.html"
     })
+
+    // cleaning health
+
+    let front_clean =0;
+    let rear_clean =4;
+    let array_clean = items["cleaning"];
+   
+    let arr_clean=[];
+    for(let i=0;i<=rear_clean;i++)
+    {
+        arr_clean.push(array_clean[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_clean,"clean")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="clforward"){
+            console.log("ok")
+            
+            if(rear_clean<array_clean.length-1){
+                rear_clean=rear_clean+1;
+                front_clean=front_clean+1;
+                arr_clean.shift();
+                arr_clean.push(array_clean[rear_clean]);
+                display_slide_button(arr_clean,"clean");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="clbackward")
+        {
+          
+            console.log("fb")
+            if(front_clean>0)
+            {
+                front_clean=front_clean-1;
+                rear_clean=rear_clean-1;
+               
+                arr_clean.pop();
+                arr_clean.unshift(array_clean[front_clean])
+                display_slide_button(arr_clean,"clean");
+            }
+        }
+    })
+    document.getElementById("clean").addEventListener("click",function(){
+        window.location.href="cleaning.html"
+    })
+
+    // Health
+
+    let front_health =0;
+    let rear_health =4;
+    let array_health = items["health"];
+   
+    let arr_health=[];
+    for(let i=0;i<=rear_health;i++)
+    {
+        arr_health.push(array_health[i])
+    }
+    // console.log(array_mango,arr_mango)
+    
+
+    display_slide_button(arr_health,"health")
+
+    // let mangoes_for = document.getElementById("mangoes_forward");
+    document.addEventListener("mouseup",function (event){
+        if(event.target.id=="hlforward"){
+            console.log("ok")
+            
+            if(rear_health<array_health.length-1){
+                rear_health=rear_health+1;
+                front_health=front_health+1;
+                arr_health.shift();
+                arr_health.push(array_health[rear_health]);
+                display_slide_button(arr_health,"health");
+            }
+        }
+    })
+
+    document.addEventListener("mouseup",function(event){
+        if(event.target.id=="hlbackward")
+        {
+          
+            console.log("fb")
+            if(front_health>0)
+            {
+                front_health=front_health-1;
+                rear_health=rear_health-1;
+               
+                arr_health.pop();
+                arr_health.unshift(array_health[front_health])
+                display_slide_button(arr_health,"health");
+            }
+        }
+    })
+    document.getElementById("health").addEventListener("click",function(){
+        window.location.href="health.html"
+    })
+
+    
 
 
 
