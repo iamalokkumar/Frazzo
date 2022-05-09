@@ -1,4 +1,4 @@
-import navbar from "../content/navbar.js"
+import {navbar} from  "../container/navbar.js";
 document.getElementById("navbar").innerHTML=navbar()
 let arr=JSON.parse(localStorage.getItem("all_items"))||[]
 import sidebar from "../content/sidebar.js"
@@ -35,4 +35,19 @@ document.getElementById("show_products").append(div)
 let getFruit=({src,name,price})=>{
     arr.push({src,name,price})
     localStorage.setItem("all_items",JSON.stringify(arr))
+    window.location.reload()
 }
+
+
+document.getElementById("cart_no").innerText=arr.length
+document.getElementById("cart_home").addEventListener("click",function(){
+    window.location.href="checkout.html";
+})
+
+document.getElementById("img").addEventListener("click",function(){
+    window.location.href="index.html";
+})
+document.getElementById("wallet").addEventListener("click",function(){
+    window.location.href="wallet.html";
+})
+
