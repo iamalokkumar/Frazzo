@@ -35,6 +35,7 @@ document.getElementById("show_products").append(div)
 let getFruit=({src,name,price})=>{
     arr.push({src,name,price})
     localStorage.setItem("all_items",JSON.stringify(arr))
+    window.location.reload()
 }
 
 
