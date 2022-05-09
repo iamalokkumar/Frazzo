@@ -1,0 +1,45 @@
+body{
+    font-family: Quicksand,sans-serif!important;
+}
+#ftd{
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+#Amain{
+    width: 90%;
+    display: flex;
+    gap: 60px;
+    margin: auto;
+}
+#ind1{
+    width: 30%;
+}
+#ind11{
+    border: 1px solid #5dc6ad;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+#cbtn{
+    color: #5dc6ad;
+    border: none;
+    margin-bottom: 50px;
+}
+#ind2{
+    width: 30%;
+    text-align: center;
+    margin-top: 100px;
+}
+#ind3{
+    width: 30%;
+}
+#sbt{
+    color: white;
+    border: none;
+    background-color: #5dc6ad;
+    padding: 15px 50px 15px 50px;
+    border-radius: 5px;
+}
+
+   
