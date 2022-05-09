@@ -18,7 +18,7 @@ let navbar = ()=>{
     </div>
     <div id="wallet">
         <div class="inner">
-            <p class="up">0</p>
+            <p class="up" id="wallet_money">0</p>
             <i class="fa-solid fa-wallet"></i>
         </div>
         <p class="dow" >wallet</p>
