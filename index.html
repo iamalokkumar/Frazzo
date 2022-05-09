@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./container/navbar.css">
     <link rel="stylesheet" href="./container/general_front_page.css">
+    <link rel="stylesheet" href="./style/footer.css">
     
 </head>
 <script
@@ -640,12 +641,14 @@
     <div style="margin-top: 80px;">
         <img width="100%" src="./main.PNG" alt="" >
     </div>
-    <div id="footer" style="width: 100%;height:500px"></div>
+    <div id="footer" ></div>
 </body>
 </html>
 <script type="module">
      import {navbar} from "./container/navbar.js"
    document.getElementById("navbar").innerHTML=navbar();
+   import footerrr from "./content/footer1.js";
+   document.getElementById("footer").innerHTML=footerrr();
    let wallet_local = localStorage.getItem("wallet_amount") || 0;
     document.getElementById("wallet_money").innerText=localStorage.getItem("wallet_amount");
    
