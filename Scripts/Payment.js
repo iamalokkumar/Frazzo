@@ -12,3 +12,4 @@ function Payment()
     {
       window.location.href = "Succes.html";
     }
+

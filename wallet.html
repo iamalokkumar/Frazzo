@@ -208,5 +208,8 @@
 
     })
 
+    let cart_item1 = JSON.parse(localStorage.getItem("all_items"))|| [];
+    document.getElementById("cart_no").innerText=cart_item1.length;
+
     
 </script>
