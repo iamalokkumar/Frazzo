@@ -3,7 +3,7 @@ document.getElementById("navbar").innerHTML=navbar()
 
 let dat=JSON.parse(localStorage.getItem("all_items"))
 
-
+let arr=JSON.parse(localStorage.getItem("all_items"))||[]
 
 dat.map(({src,name},index)=>{
 let d=document.createElement("div")
@@ -91,3 +91,5 @@ yy.addEventListener("click",gh)
 
 
 
+
+document.getElementById("cart_no").innerHTML=arr.length

@@ -45,6 +45,7 @@ let mango_data=({src,name,price})=>{
   
  arr.push({src,name,price})
  localStorage.setItem("all_items",JSON.stringify(arr))
+ window.location.reload()
    
 }
 
