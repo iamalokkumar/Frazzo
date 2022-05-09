@@ -41,3 +41,5 @@ let getFruit=({src,name,price})=>{
     arr.push({src,name,price})
     localStorage.setItem("all_items",JSON.stringify(arr))
 }
+
+document.getElementById("cart_no").innerText=arr.length
