@@ -4,7 +4,7 @@ let arr=JSON.parse(localStorage.getItem("all_items"))||[]
 
 
 
-import navbar from "../content/navbar.js"
+import {navbar} from  "../container/navbar.js";
 document.getElementById("navbar").innerHTML=navbar()
 
 import sidebar from "../content/sidebar.js"

@@ -3,7 +3,8 @@
    width: 100%;
  
    margin-top: 80px;
-   background-image: url(/super.jpg);
+   /* background-image: url(/super.jpg); */
+   background-color: #165241;
    background-repeat: no-repeat;
  background-size: cover;
  display:flex;
