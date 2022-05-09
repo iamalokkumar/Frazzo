@@ -45,5 +45,6 @@ body{
     color: white;
     border: none;
     background-color: #5dc6ad;
-    padding: 5px 20px 5px 20px;
+    padding: 15px 50px 15px 50px;
+    border-radius: 5px;
 }

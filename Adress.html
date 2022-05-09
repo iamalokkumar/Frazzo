@@ -9,33 +9,50 @@
       src="https://kit.fontawesome.com/24c494a6b6.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/styles/Adress.css"> 
+    <link rel="stylesheet" href="./styles/Adress.css">
+    <link rel="stylesheet" href="./container/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css">
 </head>
+<style>
+    #input{
+        background-color: #fff;
+    }
+</style>
 <body>
-    <div id="ftd"><img src="/images/adress.jpeg"/></div>
+    <div id="navbar"></div>
+    <div id="ftd"><img src="./images/adress.jpeg"/></div>
     <div id="Amain">
         <div id="ind1">
             <h2>Address</h2>
-            <img src="/images/a11.jpeg"/>
+            <img src="./images/a11.jpeg"/>
             <button id="cbtn">Change</button>
             <div id="ind11">
                 <h5> <span><i class="fa-solid fa-house"></i></span> Home</h5>
-                <h5>Flat Detail:</h5>
-                <h5>Address:</h5>
-                <h5>Building:</h5>
-                <h5>How To Reach: </h5>
-                <h5>Pincode:</h5>
-                <h5>City:</h5>
+                <div style="display:flex; gap:15px;">
+                    <h5>Flat Detail:</h5>
+                    <input style="height:15px; margin-top:22px;border: none;" type="text" id="a_home">
+                </div>
+                <div style="display:flex; gap:15px;">
+                    <h5>Address:</h5>
+                    <input style="height:15px; margin-top:22px;border: none;" type="text" name="" id="a_home1">
+                </div>
+                <h5>How To Reach: near by temple </h5>
+                <div style="display:flex; gap:15px;">
+                    <h5>City:</h5>
+                    <input style="height:15px; margin-top:22px;border: none;" type="text" name="" id="a_home2">
+                </div>
             </div>
         </div>
         <div id="ind2">
-            <img src="/images/a22.jpeg"/>
+            <img src="./images/a22.jpeg"/>
         </div>
         <div id="ind3">
             <h2>Bill Details</h2>
+            <div id="part2"></div>
             <button id="sbt">SELECT DELIVERY SLOT</button>
         </div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
-<script src="/Scripts/Adress.js" type="module"></script>
+<script src="./Scripts/Adress.js" type="module"></script>
