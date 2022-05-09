@@ -1,0 +1,58 @@
+#main_box{
+  
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display :flex;
+    margin-top: 60px;
+
+}
+#part1,#part2{
+    height: 100%;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.pp{
+    color:blue;
+}
+.ss{
+    height:150px
+}
+#part1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:30px;
+}
+
+.b{
+    background: skyblue;
+    color: red;
+    text-align: center;
+}
+.h{
+    color: teal;
+    font-size: 29px;
+}
+.d{
+    color:black;
+    font-size: 26px;
+}
+.d1{
+    color:teal;
+    text-align: center;
+}
+.d2{
+    color :black;
+    text-align: center;
+}
+.d3{
+    color:teal;
+    text-align: center;
+}
+.d4{
+    color:black;
+    text-align: center;
+}
+.d5{
+    color:teal;
+    text-align: center;
+}

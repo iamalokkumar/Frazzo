@@ -1,0 +1,27 @@
+#navbar{
+    height: 80px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+}
+#logo,#map,#cart,#credit,#profile{
+    height: 100%;
+    width: 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#map>img{
+    height: 100%;
+    width: 100%;
+}
+#map{
+    width: 6%;
+}
+#find{
+    height: 60%;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 10px;
+    margin-left: 3px;
+    border-radius: 20px;
+}
+

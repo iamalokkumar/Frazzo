@@ -1,0 +1,20 @@
+#main{
+    display: flex;
+}
+#show_products{
+
+  width: 90%;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+ 
+}
+.div1{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    text-align: center;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: green;
+}
