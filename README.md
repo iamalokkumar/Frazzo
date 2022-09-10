@@ -13,8 +13,8 @@ Original website link : https://fraazo.com/
 Netlify Link: https://lucky-sunburst-f93479.netlify.app/
 </br>
 
-<img src="https://drive.google.com/file/d/1UNFjZXqtNpcKbi0OrRiuxvZLUgon8uYG/view?usp=sharing" style="padding-left:15%" width="70%" height="300px" />
-<img src="https://drive.google.com/file/d/1qcKbDwauIs2hcTmhCV7v32NqyRlrDwh2/view?usp=sharing" style="padding-left:15%" width="70%" height="300px" />
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/d7/f4/27/d7f427b0-b79c-0822-fac9-e80df59d3cc2/pr_source.png/392x696bb.png" style="padding-left:15%" width="70%" height="500px" />
+<img src="https://www.ondemandapps.in/wp-content/uploads/2022/03/Fraazo-1024x683.png" width="70%" height="300px" />
 
 
 As we are still in the learning phase, the journey of building this website was very nice. We realized we could’ve achieved even more precision in building the website, but time was running out.
